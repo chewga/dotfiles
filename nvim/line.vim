@@ -1,14 +1,15 @@
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'dir', 'modified' ] ],
+      \             [ 'readonly', 'dir', 'modified', 'coc' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'filetype' ] ]
       \ },
       \ 'component': {
-      \  'dir': ' %{split(getcwd(),"/")[-1]}'
+      \  'dir': ' %{split(getcwd(),"/")[-1]}',
+      \  'coc': '%{coc#status()}%{get(b:,"coc_current_function","")}'
       \ },
       \ 'mode_map': {
         \ 'n' : 'N',
